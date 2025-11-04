@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --background: #FFFBF4;
+  --foreground: #1f1f1f;
+  --primary-bg: #f7f6f2;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1f1f1f;
+    --foreground: #FFFBF4;
+    --dark-teal: #01747b;
+    --light-mint: #b5ced2;
+    --crystal: #eee9e6;
+    --bg-light: #eaedf2;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-roboto) !important;
+
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: var(--font-roboto);
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+/* Premium slider dots styling */
+.slick-dots li {
+  transition: all 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.slick-dots li.slick-active div {
+  background: linear-gradient(90deg, #2CC98A, #68F5C7);
+  transform: scale(0.5 1);
+  border-color: #2CC98A;
+}
