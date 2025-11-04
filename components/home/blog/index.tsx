@@ -94,7 +94,7 @@ export default function Blog() {
         <ul className="mt-10 flex justify-center gap-3">{dots}</ul>
       </div>
     ),
-    customPaging: (i: number) => (
+    customPaging: () => (
       <div
         className="
         w-3 h-3 rounded-full border border-primary-medium/50
