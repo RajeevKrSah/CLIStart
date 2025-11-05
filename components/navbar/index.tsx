@@ -87,18 +87,18 @@ export default function Navbar() {
     <>
       <header
         className={`fixed top-0 left-0 w-full z-[100] transition-all duration-300 ${scrolled
-          ? "backdrop-blur-lg bg-[#0b0c0f]/80 border-b border-[#1f2a29]/50 shadow-lg"
-          : "bg-transparent"
+          ? "backdrop-blur-lg bg-black border-b border-[#1f2a29]/50 shadow-lg"
+          : "bg-black"
           }`}
       >
         <nav className="container mx-auto py-2 px-5 flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
-              src="/CliStartLogo.png"
+              src="/logo.jpg"
               alt="CliStart Logo"
-              width={150}
-              height={150}
+              width={220}
+              height={220}
               priority
             />
           </Link>
