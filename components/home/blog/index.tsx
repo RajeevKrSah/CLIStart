@@ -25,13 +25,13 @@ const fadeUp = {
   },
 };
 
-// Example posts (replace with dynamic data)
-const blogPosts = [
+
+export const blogPosts = [
   {
     id: 1,
     title: "Designing Medical Spaces That Inspire Confidence",
     excerpt:
-      "Explore how modern design and functionality combine to create medical chambers that enhance patient experience and practitioner comfort.",
+      "Explore how modern design, ergonomics, and patient psychology influence the creation of medical chambers that elevate trust and comfort.",
     image: "/hero1.jpg",
     date: "Nov 2025",
     readTime: "5 min read",
@@ -41,8 +41,8 @@ const blogPosts = [
     id: 2,
     title: "How Location Impacts Patient Footfall",
     excerpt:
-      "Choosing the right clinic location can dramatically influence visibility and growth. Discover the key metrics to consider.",
-    image: "/hero1.jpg",
+      "Choosing the right clinic location can significantly improve visibility, accessibility, and long-term growth. Learn which factors matter most.",
+    image: "/hero2.jpg",
     date: "Oct 2025",
     readTime: "4 min read",
     href: "/blog/choosing-right-location",
@@ -51,8 +51,8 @@ const blogPosts = [
     id: 3,
     title: "The Rise of Ready-to-Use Healthcare Chambers",
     excerpt:
-      "Learn why ready-to-practice medical spaces are transforming healthcare infrastructure across urban India.",
-    image: "/hero1.jpg",
+      "Discover why plug-and-play medical chambers are becoming the preferred choice for modern healthcare professionals across India.",
+    image: "/hero3.jpg",
     date: "Sept 2025",
     readTime: "6 min read",
     href: "/blog/ready-to-use-healthcare-spaces",
@@ -61,8 +61,8 @@ const blogPosts = [
     id: 4,
     title: "Future of Healthcare Real Estate",
     excerpt:
-      "Discover the trends shaping the future of medical property development and investment in India.",
-    image: "/hero1.jpg",
+      "A deep dive into the trends shaping the evolution of healthcare real estate, from flexible rentals to tech-enabled clinical environments.",
+    image: "/hero4.jpg",
     date: "Aug 2025",
     readTime: "5 min read",
     href: "/blog/future-healthcare-real-estate",
@@ -97,11 +97,14 @@ export default function Blog() {
     customPaging: () => (
       <div
         className="
-        w-3 h-3 rounded-full border border-primary-medium/50
-        bg-white/40
-        hover:bg-primary-medium/70
-        transition-all duration-500 ease-[cubic-bezier(0.33,1,0.68,1)]
-      "
+      relative w-2.5 h-2.5 shrink-0
+      before:absolute before:inset-0 before:rounded-full
+      before:bg-primary-medium/20 before:scale-0 before:opacity-0
+      hover:before:scale-150 hover:before:opacity-100
+      before:transition-all before:duration-500
+      bg-primary-medium/60 rounded-full
+      transition-all duration-500
+    "
       />
     ),
     responsive: [
@@ -122,7 +125,7 @@ export default function Blog() {
       {/* Soft Background Accent */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] bg-primary-medium/5 rounded-full blur-3xl -z-10" />
 
-      <div ref={ref} className="container mx-auto px-5">
+      <div ref={ref} className="container mx-auto px-5 md:px-8">
         {/* Section Heading */}
         <motion.div
           variants={container}
@@ -181,7 +184,7 @@ export default function Blog() {
                     <h3 className="text-xl font-semibold text-gray-900 leading-snug group-hover:text-primary-medium transition-colors">
                       {post.title}
                     </h3>
-                    <p className="text-gray-600 text-[15px] leading-relaxed line-clamp-3">
+                    <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
                       {post.excerpt}
                     </p>
                     <Link

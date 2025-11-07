@@ -20,31 +20,30 @@ const fadeUp = {
   },
 };
 
-// Updated content (clinic-oriented)
 const propertyTypes = [
   {
     id: 1,
     title: "Dental Chambers",
     count: "25+ Available",
-    icon: <HeartPulse size={46} className="text-[#22D3A6]" />,
+    icon: <HeartPulse size={46} className="text-primary-medium" />,
   },
   {
     id: 2,
     title: "General Clinics",
     count: "40+ Ready Spaces",
-    icon: <Stethoscope size={46} className="text-[#22D3A6]" />,
+    icon: <Stethoscope size={46} className="text-primary-medium" />,
   },
   {
     id: 3,
     title: "Corporate Health Centers",
     count: "15+ Active Units",
-    icon: <BriefcaseMedical size={46} className="text-[#22D3A6]" />,
+    icon: <BriefcaseMedical size={46} className="text-primary-medium" />,
   },
   {
     id: 4,
     title: "Diagnostic Labs",
     count: "20+ Operational",
-    icon: <Building2 size={46} className="text-[#22D3A6]" />,
+    icon: <Building2 size={46} className="text-primary-medium" />,
   },
 ];
 
@@ -64,7 +63,7 @@ export default function Property() {
 
       <div
         ref={ref}
-        className="container mx-auto px-5 flex flex-col lg:flex-row items-center justify-between gap-16"
+        className="container mx-auto px-5 md:px-12 flex flex-col lg:flex-row items-center justify-between gap-16"
       >
         {/* Left content */}
         <motion.div

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { AnimatedCounter } from "@/components/common/Counter";
 
 const container = {
   hidden: {},
@@ -20,6 +21,34 @@ const fadeUp = {
   },
 };
 
+const WhyChooseUsData = [
+  {
+    title: "Clinics Across Delhi NCR",
+    value: 10,
+    suffix: "+",
+    desc: "premium, fully managed chambers",
+  },
+  {
+    title: "Doctors Served",
+    value: 80,
+    suffix: "+",
+    desc: "active practitioners using CliStart",
+  },
+  {
+    title: "Patient Visits",
+    value: 12000,
+    suffix: "+",
+    desc: "annual consultations supported",
+  },
+  {
+    title: "Operational Efficiency",
+    value: 98,
+    suffix: "%",
+    desc: "uptime with managed facility suppor",
+  },
+];
+
+
 const WhyChooseUs = () => {
   const ref = useRef(null);
   const controls = useAnimation();
@@ -30,17 +59,17 @@ const WhyChooseUs = () => {
   }, [isInView, controls]);
 
   return (
-    <section className="bg-white py-20 md:py-28 relative overflow-hidden">
+    <section className="bg-white py-12 md:py-28 relative overflow-hidden">
       {/* Soft background glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[90vw] h-[90vw] bg-primary-medium/5 rounded-full blur-3xl -z-10" />
 
-      <div ref={ref} className="container mx-auto px-5">
+      <div ref={ref} className="container mx-auto px-5 md:px-12">
         {/* Section Title */}
         <motion.div
           initial="hidden"
           animate={controls}
           variants={container}
-          className="max-w-2xl mx-auto text-center mb-16 md:mb-24"
+          className="max-w-2xl mx-auto text-center mb-10 md:mb-24"
         >
           <motion.h2
             variants={fadeUp}
@@ -58,7 +87,7 @@ const WhyChooseUs = () => {
         </motion.div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
           {/* Left Image */}
           <motion.div
             initial={{ opacity: 0, scale: 1.05, y: 60 }}
@@ -98,33 +127,16 @@ const WhyChooseUs = () => {
 
           {/* Right Grid */}
           <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8"
+            className="grid grid-cols-2 gap-6 md:gap-8"
             variants={container}
             initial="hidden"
             animate={controls}
           >
-            {[
-              {
-                title: "Global Reach",
-                value: "85+",
-                desc: "offices worldwide",
-              },
-              {
-                title: "Local Expertise",
-                value: "1,500+",
-                desc: "employees",
-              },
-              {
-                title: "Our Impact",
-                value: "248+",
-                desc: "projects done",
-              },
-            ].map((item) => (
+            {WhyChooseUsData.map((item) => (
               <motion.div
                 key={item.title}
                 variants={fadeUp}
-                transition={{ duration: 0.4, ease: [0.33, 1, 0.68, 1] }}
-                className="bg-[#f9f9f9] p-6 sm:p-8 rounded-2xl flex flex-col justify-between backdrop-blur-sm border border-white/60"
+                className="bg-[#f9f9f9] p-6 md:p-8 rounded-2xl flex flex-col justify-between backdrop-blur-sm border border-white/60"
               >
                 <div>
                   <p className="text-xs sm:text-sm font-semibold text-gray-600 uppercase tracking-wider mb-2">
@@ -132,35 +144,16 @@ const WhyChooseUs = () => {
                   </p>
                   <hr className="border-gray-200 mb-6" />
                 </div>
+
                 <div className="mt-10">
-                  <h3 className="text-4xl sm:text-5xl font-bold text-gray-800">
-                    {item.value.split("+")[0]}{" "}
-                    <span className="text-primary-medium">+</span>
-                  </h3>
-                  <p className="text-gray-500 mt-2 text-xs sm:text-sm">
-                    {item.desc}
-                  </p>
+                  <div className="text-4xl sm:text-5xl font-bold text-gray-800">
+                    <AnimatedCounter target={item.value} suffix={item.suffix} duration={2} />
+                  </div>
+
+                  <p className="text-gray-500 mt-2 text-xs sm:text-sm">{item.desc}</p>
                 </div>
               </motion.div>
             ))}
-
-            {/* Architecture Image (fixed layout) */}
-            <motion.div
-              variants={fadeUp}
-              transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1] }}
-              className="relative isolate rounded-2xl overflow-hidden h-56 sm:h-64 w-full"
-            >
-              <div className="absolute inset-0">
-                <Image
-                  src="/Chamber3.jpg"
-                  alt="Architect working"
-                  fill
-                  priority
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
-                />
-              </div>
-            </motion.div>
           </motion.div>
         </div>
       </div>

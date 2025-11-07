@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 import { FaPinterest } from 'react-icons/fa';
 
@@ -20,7 +19,7 @@ const QuickLinks: FooterProps[] = [
   { name: 'Contact', href: '/contact' },
 ];
 
-const CompanyLinks: FooterProps[]    = [
+const CompanyLinks: FooterProps[] = [
   { name: 'About Us', href: '/about' },
   { name: 'Careers', href: '/careers' },
   { name: 'Affiliate Program', href: '/affiliate' },
@@ -39,19 +38,19 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className="bg-primary-dark text-primary-light overflow-hidden">
-      <section className="container mx-auto px-5 py-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10 lg:gap-16">
+      <section className="container mx-auto px-5 md:px-12 py-10">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-5 lg:gap-16">
           {/* Brand Section */}
-          <div className="md:col-span-2">
-            <Link href="/" className="flex items-center gap-3 mb-6">
+          <div className="col-span-2">
+            {/* <Link href="/" className="flex items-center gap-3 mb-6">
               <Image
-                src="/CliStartLogo.png"
+                src="/logo.png"
                 alt="CliStart Logo"
                 width={150}
                 height={150}
                 priority
               />
-            </Link>
+            </Link> */}
             <p className="text-sm text-primary-light/70 leading-relaxed max-w-sm">
               CliStart provides ready-to-use, premium medical chambers designed
               for healthcare professionals. Build your practice without the
@@ -59,8 +58,8 @@ export default function Footer() {
             </p>
 
             {/* Social Media */}
-            <div className="mt-4">
-              <h4 className="text-sm font-semibold mb-2 uppercase tracking-wide text-primary-light/80">
+            <div className="mt-6">
+              <h4 className="text-sm font-semibold mb-6 uppercase tracking-wide text-primary-light/80">
                 Connect With Us
               </h4>
               <div className="flex items-center gap-3">
@@ -71,7 +70,7 @@ export default function Footer() {
                     aria-label={name}
                     className="p-2 rounded-full bg-primary-light/10 hover:bg-primary-medium/20 transition-all duration-300"
                   >
-                    <Icon size={18} className="text-primary-light" />
+                    <Icon size={18} className="text-primary-medium" />
                   </Link>
                 ))}
               </div>

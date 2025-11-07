@@ -41,7 +41,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .slick-dots li.slick-active div {
-  background: linear-gradient(90deg, #2CC98A, #68F5C7);
+  background: linear-gradient(90deg, #060D0C, #060D0C);
+  opacity: 0.8;
   transform: scale(0.5 1);
-  border-color: #2CC98A;
 }

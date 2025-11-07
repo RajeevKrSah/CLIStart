@@ -60,7 +60,7 @@ export default function HeroCarousel() {
       <div
         ref={containerRef}
         onMouseMove={handleMouseMove}
-        className="relative overflow-hidden h-[90vh]"
+        className="relative overflow-hidden h-[70vh] md:h-[90vh]"
       >
         <AnimatePresence initial={false}>
           {slides.map(
@@ -72,7 +72,7 @@ export default function HeroCarousel() {
                   initial={{ opacity: 0, scale: 1.03 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 1.02 }}
-                  transition={{ duration: 1.2, ease:[0.65, 0, 0.35, 1] }}
+                  transition={{ duration: 1.2, ease: [0.65, 0, 0.35, 1] }}
                 >
                   {/* Background image */}
                   <motion.div
@@ -102,7 +102,7 @@ export default function HeroCarousel() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent" />
 
                   {/* Text Content */}
-                  <div className="container mx-auto relative z-10 flex flex-col justify-center h-full px-6 text-white">
+                  <div className="container mx-auto relative z-10 flex flex-col justify-center h-full px-5 md:px-12 text-white">
                     <motion.div
                       key={slide.id}
                       initial="hidden"
@@ -140,7 +140,7 @@ export default function HeroCarousel() {
                           visible: { x: 0, opacity: 1, transition: { duration: 1, ease } },
                           exit: { x: -80, opacity: 0, transition: { duration: 0.8, ease } },
                         }}
-                        className="text-gray-200 text-base md:text-lg leading-relaxed max-w-xl border-l-4 border-primary-medium pl-6"
+                        className="text-xl md:text-2xl text-gray-200 leading-relaxed max-w-2xl font-light"
                       >
                         {slide.subtitle}
                       </motion.p>
@@ -156,7 +156,7 @@ export default function HeroCarousel() {
                           onMouseEnter={() => setHover(true)}
                           onMouseLeave={() => setHover(false)}
                           whileHover={{ x: 5 }}
-                          className="group relative inline-flex items-center mt-10 bg-white text-gray-700 px-8 py-3 text-sm uppercase tracking-widest font-semibold overflow-hidden shadow-lg rounded-md"
+                          className="group relative inline-flex items-center bg-primary-medium text-white font-semibold px-8 py-3 overflow-hidden rounded-md"
                         >
                           <motion.div
                             className="absolute inset-0 bg-primary-medium"

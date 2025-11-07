@@ -7,41 +7,43 @@ import { Quote, Star } from 'lucide-react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Link from 'next/link';
 
 const testimonials = [
   {
-    name: 'Michael Smith',
-    role: 'Property Investor',
-    image: '/hero1.jpg',
+    name: "Dr. Aakash Gupta",
+    role: "General Physician, Delhi",
+    image: "/Profile.png",
     feedback:
-      'Dreams Estate made finding investment properties effortless. The platform is intuitive, and the support team is always responsive.',
+      "CliStart Chambers transformed my practice instantly. I started consultations the same day without worrying about setup, utilities, or maintenance. The patient experience has improved significantly.",
     rating: 5,
   },
   {
-    name: 'Sarah Johnson',
-    role: 'Home Buyer',
-    image: '/hero1.jpg',
+    name: "Dr. Neha Bansal",
+    role: "Dermatologist, Gurugram",
+    image: "/Profile.png",
     feedback:
-      'We found our dream home within a week! The listings were accurate, detailed, and the agents were highly professional.',
+      "The chamber interiors are modern, clean, and extremely professional. My patients love the environment, and the flexible scheduling helps me balance multiple clinic locations with ease.",
     rating: 5,
   },
   {
-    name: 'David Kim',
-    role: 'Real Estate Agent',
-    image: '/hero1.jpg',
+    name: "Dr. Rohan Iyer",
+    role: "Orthopedic Consultant, South Delhi",
+    image: "/Profile.png",
     feedback:
-      'Partnering with Dreams Estate has helped me connect with clients faster and close deals more efficiently than ever before.',
+      "As a visiting specialist, the hourly rental model is perfect. The staff is supportive, the rooms are always patient-ready, and the overall experience is seamless.",
     rating: 4,
   },
   {
-    name: 'Emily Carter',
-    role: 'Landlord',
-    image: '/hero1.jpg',
+    name: "Dr. Sana Farooq",
+    role: "Pediatrician, Gurugram",
+    image: "/Profile.png",
     feedback:
-      'The renting process is seamless. Managing my listings and finding reliable tenants has never been easier.',
+      "ClinStart takes care of everything—cleaning, maintenance, utilities—so I can purely focus on consultations. The chamber’s location has also boosted my patient flow.",
     rating: 5,
   },
 ];
+
 
 export default function Testimonials() {
   const settings = {
@@ -58,7 +60,7 @@ export default function Testimonials() {
 
   return (
     <section className="relative py-24 bg-primary-dark overflow-hidden text-[#f0ede5]">
-      <div className="relative container mx-auto px-5 z-10">
+      <div className="relative container mx-auto px-5 md:px-12 z-10">
         {/* Section heading */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -85,24 +87,19 @@ export default function Testimonials() {
             transition={{ duration: 0.7 }}
             className="space-y-5 max-w-lg"
           >
-            <h3 className="text-5xl leading-tight font-light">
+            <h3 className="text-5xl leading-tight font-semibold">
               Trusted by <br />
               <span className="text-primary-medium">Thousands of Clients</span>
             </h3>
-            <p className="text-[#f0ede5]/80 leading-relaxed font-light">
+            <p className="font-light">
               We’ve built our reputation through consistency and care. Each client experience
               is a story of success, and we take pride in every one.
             </p>
-            <motion.button
-              whileHover={{
-                backgroundColor: '#ffffff',
-                color: '#0b0c0f',
-              }}
-              whileTap={{ scale: 0.97 }}
-              className="border border-primary-medium/40 px-8 py-3 text-sm text-primary-dark tracking-wide backdrop-blur-md bg-white transition-all"
+            <Link href="/success-stories"
+              className="items-center bg-primary-medium text-white font-semibold px-8 py-3 inline-flex overflow-hidden rounded-md hover:bg-white hover:text-primary-medium transition-all"
             >
               Read Success Stories
-            </motion.button>
+            </Link>
           </motion.div>
 
           {/* Right carousel */}
