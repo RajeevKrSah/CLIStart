@@ -30,7 +30,7 @@ const WhyChooseUsData = [
   },
   {
     title: "Doctors Served",
-    value: 80,
+    value: 45,
     suffix: "+",
     desc: "active practitioners using CliStart",
   },
@@ -136,7 +136,7 @@ const WhyChooseUs = () => {
               <motion.div
                 key={item.title}
                 variants={fadeUp}
-                className="bg-[#f9f9f9] p-6 md:p-8 rounded-lg flex flex-col justify-between backdrop-blur-sm border border-white/60"
+                className="bg-[#f9f9f9] p-4 md:p-8 rounded-lg flex flex-col justify-between backdrop-blur-sm border border-white/60"
               >
                 <div>
                   <p className="text-xs sm:text-sm font-semibold text-gray-600 uppercase tracking-wider mb-2">
