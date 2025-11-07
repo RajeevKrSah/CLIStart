@@ -114,7 +114,7 @@ export default function AboutSection() {
             variants={fadeUp}
             className="col-span-1 flex flex-col justify-center"
           >
-            <div className="relative h-[410px] md:h-[500px] w-full rounded-2xl overflow-hidden">
+            <div className="relative h-[410px] md:h-[500px] w-full rounded-lg overflow-hidden">
               <Image
                 src="/Dental_chain.jpg"
                 alt="Clinic building exterior"
@@ -127,7 +127,7 @@ export default function AboutSection() {
 
           {/* Column 2 */}
           <motion.div variants={fadeUp} className="col-span-1 space-y-6">
-            <div className="relative h-48 md:h-60 w-full rounded-2xl overflow-hidden">
+            <div className="relative h-48 md:h-60 w-full rounded-lg overflow-hidden">
               <Image
                 src="/Chamber1.jpg"
                 alt="Fully furnished medical chamber"
@@ -136,7 +136,7 @@ export default function AboutSection() {
                 className="object-cover"
               />
             </div>
-            <div className="relative h-48 md:h-60 w-full rounded-2xl overflow-hidden">
+            <div className="relative h-48 md:h-60 w-full rounded-lg overflow-hidden">
               <Image
                 src="/Chamber2.jpg"
                 alt="Modern healthcare workspace"

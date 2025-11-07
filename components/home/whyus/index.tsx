@@ -100,7 +100,7 @@ const WhyChooseUs = () => {
                 transition: { duration: 1.4, ease: [0.33, 1, 0.68, 1] },
               },
             }}
-            className="relative rounded-2xl overflow-hidden h-[340px] sm:h-[460px] lg:h-[530px] shadow-sm"
+            className="relative rounded-lg overflow-hidden h-[340px] md:h-[500px] shadow-sm"
           >
             <motion.div
               initial={{ scale: 1.15 }}
@@ -136,7 +136,7 @@ const WhyChooseUs = () => {
               <motion.div
                 key={item.title}
                 variants={fadeUp}
-                className="bg-[#f9f9f9] p-6 md:p-8 rounded-2xl flex flex-col justify-between backdrop-blur-sm border border-white/60"
+                className="bg-[#f9f9f9] p-6 md:p-8 rounded-lg flex flex-col justify-between backdrop-blur-sm border border-white/60"
               >
                 <div>
                   <p className="text-xs sm:text-sm font-semibold text-gray-600 uppercase tracking-wider mb-2">

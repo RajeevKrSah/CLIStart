@@ -91,7 +91,7 @@ export default function Blog() {
     arrows: false,
     appendDots: (dots: React.ReactNode) => (
       <div>
-        <ul className="mt-10 flex justify-center gap-3">{dots}</ul>
+        <ul className="mt-10 flex justify-center gap-3 shrink-0">{dots}</ul>
       </div>
     ),
     customPaging: () => (
@@ -160,7 +160,7 @@ export default function Blog() {
               <div key={post.id} className="px-1 md:px-4">
                 <motion.article
                   variants={fadeUp}
-                  className="group relative rounded-2xl overflow-hidden"
+                  className="group relative rounded-lg overflow-hidden"
                 >
                   {/* Image */}
                   <div className="relative h-64 w-full overflow-hidden">

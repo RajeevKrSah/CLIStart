@@ -109,7 +109,7 @@ export default function Testimonials() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <div className="relative bg-dark/70 backdrop-blur-xl border border-primary-medium/20 rounded-3xl p-6 md:p-10 shadow-xl">
+            <div className="relative bg-dark/70 backdrop-blur-xl border border-primary-medium/20 rounded-lg p-6 md:p-10 shadow-xl">
               <Quote className="absolute top-6 right-6 text-primary-medium/40 w-8 h-8" />
 
               <Slider {...settings}>

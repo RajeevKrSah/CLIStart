@@ -17,14 +17,14 @@ const solutions = [
 export default function SolutionsSplitSection() {
     return (
         <section className="bg-gradient-to-br from-[#0A0F1F] via-[#0A0F1F] to-[#05070D] text-white py-10 md:py-24 overflow-hidden">
-            <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 px-6 md:px-12">
+            <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 px-5 md:px-12">
                 {/* IMAGE SIDE */}
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.9 }}
-                    className="relative h-[50vh] md:h-[80vh] rounded-3xl overflow-hidden shadow-sm border border-white/10"
+                    className="relative h-[400px] md:h-[650px] rounded-lg overflow-hidden shadow-sm border border-white/10"
                 >
                     <Image
                         src="/Solutions.jpeg"
@@ -36,7 +36,7 @@ export default function SolutionsSplitSection() {
                 </motion.div>
 
                 {/* SOLUTION LIST SIDE */}
-                <div className="flex flex-col justify-center space-y-10 md:space-y-14">
+                <div className="flex flex-col justify-center space-y-10">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -65,7 +65,7 @@ export default function SolutionsSplitSection() {
                             >
                                 <Link
                                     href={solution.href}
-                                    className="text-2xl font-semibold tracking-wide transition-all group-hover:text-primary-light"
+                                    className="text-xl md:text-2xl font-semibold tracking-wide transition-all group-hover:text-primary-light"
                                 >
                                     {solution.title}
                                 </Link>
