@@ -38,6 +38,7 @@ h1,h2,h3,h4,h5,h6{
 /* Premium slider dots styling */
 .slick-dots li {
   transition: all 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+  flex-shrink: 0;
 }
 
 .slick-dots li.slick-active div {

@@ -59,7 +59,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="relative py-24 bg-primary-dark overflow-hidden text-[#f0ede5]">
+    <section className="relative py-12 md:py-24 bg-primary-dark overflow-hidden text-[#f0ede5]">
       <div className="relative container mx-auto px-5 md:px-12 z-10">
         {/* Section heading */}
         <motion.div
@@ -109,7 +109,7 @@ export default function Testimonials() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <div className="relative bg-dark/70 backdrop-blur-xl border border-primary-medium/20 rounded-3xl p-10 shadow-2xl">
+            <div className="relative bg-dark/70 backdrop-blur-xl border border-primary-medium/20 rounded-3xl p-6 md:p-10 shadow-xl">
               <Quote className="absolute top-6 right-6 text-primary-medium/40 w-8 h-8" />
 
               <Slider {...settings}>
@@ -129,12 +129,12 @@ export default function Testimonials() {
                     </div>
 
                     {/* Feedback */}
-                    <p className="text-lg text-[#f0ede5]/90 leading-relaxed italic">
+                    <p className="text-lg text-[#f0ede5]/90 leading-relaxed">
                       “{item.feedback}”
                     </p>
 
                     {/* Client */}
-                    <div className="flex items-center gap-4 pt-4 border-t border-primary-medium/30">
+                    <div className="flex items-center gap-4 pt-4 border-t border-primary-medium/30 mt-auto">
                       <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-primary-medium">
                         <Image
                           src={item.image}

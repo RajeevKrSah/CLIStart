@@ -32,7 +32,7 @@ export const blogPosts = [
     title: "Designing Medical Spaces That Inspire Confidence",
     excerpt:
       "Explore how modern design, ergonomics, and patient psychology influence the creation of medical chambers that elevate trust and comfort.",
-    image: "/hero1.jpg",
+    image: "/Chambers.jpeg",
     date: "Nov 2025",
     readTime: "5 min read",
     href: "/blog/designing-medical-spaces",
@@ -42,7 +42,7 @@ export const blogPosts = [
     title: "How Location Impacts Patient Footfall",
     excerpt:
       "Choosing the right clinic location can significantly improve visibility, accessibility, and long-term growth. Learn which factors matter most.",
-    image: "/hero2.jpg",
+    image: "/Doctors.jpeg",
     date: "Oct 2025",
     readTime: "4 min read",
     href: "/blog/choosing-right-location",
@@ -52,7 +52,7 @@ export const blogPosts = [
     title: "The Rise of Ready-to-Use Healthcare Chambers",
     excerpt:
       "Discover why plug-and-play medical chambers are becoming the preferred choice for modern healthcare professionals across India.",
-    image: "/hero3.jpg",
+    image: "/Healthcare-chambers.jpeg",
     date: "Sept 2025",
     readTime: "6 min read",
     href: "/blog/ready-to-use-healthcare-spaces",
@@ -62,7 +62,7 @@ export const blogPosts = [
     title: "Future of Healthcare Real Estate",
     excerpt:
       "A deep dive into the trends shaping the evolution of healthcare real estate, from flexible rentals to tech-enabled clinical environments.",
-    image: "/hero4.jpg",
+    image: "/office.jpeg",
     date: "Aug 2025",
     readTime: "5 min read",
     href: "/blog/future-healthcare-real-estate",

@@ -24,18 +24,32 @@ export default function NotFoundPage() {
   };
 
   return (
-    <section className="bg-white min-h-screen flex items-center">
+    <section className="bg-white">
       <motion.div
         initial="hidden"
         animate="visible"
         variants={containerVariants}
-        className="container mx-auto px-5 py-12"
+        className="container mx-auto px-5 md:px-12 py-10"
       >
-        <div className="grid grid-cols-2 items-center gap-10">
-          {/* Left content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+
+          <motion.div
+            variants={itemVariants}
+            className="relative w-full h-[300px] md:h-[500px] flex justify-center md:justify-start"
+          >
+            <Image
+              src="/Thinking_Boy.png"
+              alt="Illustration of a boy thinking - 404 Not Found"
+              fill
+              priority
+              className="object-contain"
+            />
+          </motion.div>
+
+
           <motion.div
             variants={containerVariants}
-            className="col-span-1 text-center md:text-left space-y-6"
+            className="text-center md:text-left space-y-6"
           >
             <motion.h1
               variants={itemVariants}
@@ -56,7 +70,7 @@ export default function NotFoundPage() {
               className="text-gray-600 text-base sm:text-lg leading-relaxed max-w-xl"
             >
               The page you&apos;re looking for seems to be out of focus. Maybe it
-              was cropped—or never developed. Let&apos;s find you a better angle.
+              was cropped or never developed. Let&apos;s find you a better angle.
             </motion.p>
 
             <motion.div variants={itemVariants}>
@@ -67,22 +81,6 @@ export default function NotFoundPage() {
                 Back to Home
               </Link>
             </motion.div>
-          </motion.div>
-
-          {/* Right image */}
-          <motion.div
-            variants={itemVariants}
-            className="col-span-1 relative w-full h-[300px] md:h-[500px] flex justify-center md:justify-end"
-          >
-            <div className="relative w-full h-full">
-              <Image
-                src="/Thinking_Boy.png"
-                alt="Illustration of a boy thinking - 404 Not Found"
-                fill
-                priority
-                className="object-contain md:object-right"
-              />
-            </div>
           </motion.div>
         </div>
       </motion.div>

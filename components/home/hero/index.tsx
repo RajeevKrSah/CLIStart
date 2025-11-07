@@ -25,7 +25,7 @@ const slides = [
     title: "Smart, Ready-to-Use Spaces",
     subtitle:
       "Experience comfort, privacy, and professionalism in every CliStart chamber.",
-    image: "/Child_Section.jpg",
+    image: "/office.jpeg",
   },
 ];
 

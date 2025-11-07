@@ -109,7 +109,7 @@ const WhyChooseUs = () => {
               className="w-full h-full"
             >
               <Image
-                src="/Coridor.jpg"
+                src="/why-choose-us.jpeg"
                 alt="Modern medical corridor"
                 fill
                 priority
