@@ -94,12 +94,12 @@ export default function Blog() {
         <ul className="mt-10 flex justify-center gap-3 shrink-0">{dots}</ul>
       </div>
     ),
-    customPaging: (i: number) => (
+    customPaging: () => (
       <div
         className={`
           relative w-2.5 h-2.5 shrink-0
           before:absolute before:inset-0 before:rounded-full
-          before:bg-primary-medium/20 before:scale-0 before:opacity-0
+          before:bg-primary-medium before:scale-0 before:opacity-0
           hover:before:scale-150 hover:before:opacity-100
           before:transition-all before:duration-500
           bg-primary-medium/60 rounded-full

@@ -7,6 +7,10 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: [
+    "shrink-0",
+    "transition-all duration-500 ease-[cubic-bezier(0.33,1,0.68,1)]",
+  ],
   theme: {
     extend: {
       colors: {

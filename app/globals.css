@@ -37,13 +37,12 @@ h1,h2,h3,h4,h5,h6{
 
 /* Premium slider dots styling */
 .slick-dots li {
-  transition: all 0.5s cubic-bezier(0.33, 1, 0.68, 1);
-  flex-shrink: 0;
+  flex-shrink: 0 !important;
 }
 
 .slick-dots li.slick-active div {
   background: linear-gradient(90deg, #060D0C, #060D0C);
   opacity: 0.8;
-  transform: scale(0.5 1);
+  transform: scale(1);
   flex-shrink: 0;
 }
